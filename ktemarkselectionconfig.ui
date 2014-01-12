@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KteMarkSelectionConfig</class>
+ <widget class="QWidget" name="KteMarkSelectionConfig">
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <widget class="KColorButton" name="kcolorbutton1"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label1">
+     <property name="text">
+      <string>1st style</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="KColorButton" name="kcolorbutton2"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label5">
+     <property name="text">
+      <string>5th style</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label2">
+     <property name="text">
+      <string>2nd style</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label3">
+     <property name="text">
+      <string>3rd style</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="KColorButton" name="kcolorbutton5"/>
+   </item>
+   <item row="2" column="1">
+    <widget class="KColorButton" name="kcolorbutton3"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label4">
+     <property name="text">
+      <string>4th style</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="KColorButton" name="kcolorbutton4"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KColorButton</class>
+   <extends>QPushButton</extends>
+   <header>kcolorbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

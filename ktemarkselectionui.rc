@@ -1,0 +1,22 @@
+<!DOCTYPE kpartgui>
+<kpartplugin name="ktexteditor_ktemarkselection" library="ktexteditor_ktemarkselection" version="2">
+<MenuBar>
+ <Menu name="tools"><Text>&amp;Tools</Text>
+    <Menu name="mark_selection"><Text>Mark selection</Text>
+        <Action name="tools_ktemarkselection1" group="tools_operations"/>
+        <Action name="tools_ktemarkselection2" group="tools_operations"/>
+        <Action name="tools_ktemarkselection3" group="tools_operations"/>
+        <Action name="tools_ktemarkselection4" group="tools_operations"/>
+        <Action name="tools_ktemarkselection5" group="tools_operations"/>
+    </Menu>
+    <Menu name="unmark_selection"><Text>Unmark selection</Text>
+        <Action name="tools_kteunmarkselection1" group="tools_operations"/>
+        <Action name="tools_kteunmarkselection2" group="tools_operations"/>
+        <Action name="tools_kteunmarkselection3" group="tools_operations"/>
+        <Action name="tools_kteunmarkselection4" group="tools_operations"/>
+        <Action name="tools_kteunmarkselection5" group="tools_operations"/>
+        </Menu>
+    <separator group="tools_operations" />
+ </Menu>
+</MenuBar>
+</kpartplugin>

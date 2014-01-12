@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-KDE-Library=ktexteditor_ktemarkselection
+X-KDE-PluginKeyword=ktexteditor_ktemarkselection_config
+X-KDE-FactoryName=ktexteditor_ktemarkselection_config
+X-KDE-ParentComponents=ktexteditor_ktemarkselection
+Name=Colors for Mark Selection plugin
