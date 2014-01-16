@@ -40,6 +40,7 @@ public:
 private slots:
     void createSelection();
     void removeSelection();
+    void removeAllSelections();
     
 private:
     void clearSelection( int colorId );

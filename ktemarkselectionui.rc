@@ -15,6 +15,7 @@
         <Action name="tools_kteunmarkselection3" group="tools_operations"/>
         <Action name="tools_kteunmarkselection4" group="tools_operations"/>
         <Action name="tools_kteunmarkselection5" group="tools_operations"/>
+        <Action name="tools_kteunmarkall" group="tools_operations"/>
         </Menu>
     <separator group="tools_operations" />
  </Menu>

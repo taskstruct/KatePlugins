@@ -209,16 +209,18 @@ KteMarkSelectionView::KteMarkSelectionView(const QList<QColor> colros, KTextEdit
     action->setProperty( "colorID", 4 );
     //action->setShortcut(Qt::CTRL + Qt::Key_XYZ);
     connect(action, SIGNAL(triggered()), this, SLOT(removeSelection()));
+    
+    action = new KAction(i18n("All"), this);
+    actionCollection()->addAction("tools_kteunmarkall", action);
+    //action->setShortcut(Qt::CTRL + Qt::Key_XYZ);
+    connect(action, SIGNAL(triggered()), this, SLOT(removeAllSelections()));
 
     setXMLFile("ktemarkselectionui.rc");
 }
 
 KteMarkSelectionView::~KteMarkSelectionView()
 {
-    for( int i = 0; i < SEL_COLORS_COUNT; ++i)
-    {
-        clearSelection(i);
-    }
+    removeAllSelections();
 }
 
 void KteMarkSelectionView::createSelection()
@@ -285,6 +287,14 @@ void KteMarkSelectionView::removeSelection()
     //TODO: Validation
     const int colorId = sender()->property("colorID").toInt();
     clearSelection(colorId);
+}
+
+void KteMarkSelectionView::removeAllSelections()
+{
+    for( int i = 0; i < SEL_COLORS_COUNT; ++i)
+    {
+        clearSelection(i);
+    }
 }
 
 void KteMarkSelectionView::setColors( const QList<QColor> colors )
