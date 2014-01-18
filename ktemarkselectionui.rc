@@ -20,4 +20,24 @@
     <separator group="tools_operations" />
  </Menu>
 </MenuBar>
+
+<Menu name="ktexteditor_popup">
+    <Menu name="mark_selection"><Text>Mark selection</Text>
+        <Action name="tools_ktemarkselection1" group="popup_operations"/>
+        <Action name="tools_ktemarkselection2" group="popup_operations"/>
+        <Action name="tools_ktemarkselection3" group="popup_operations"/>
+        <Action name="tools_ktemarkselection4" group="popup_operations"/>
+        <Action name="tools_ktemarkselection5" group="popup_operations"/>
+    </Menu>
+    <Menu name="unmark_selection"><Text>Unmark selection</Text>
+        <Action name="tools_kteunmarkselection1" group="popup_operations"/>
+        <Action name="tools_kteunmarkselection2" group="popup_operations"/>
+        <Action name="tools_kteunmarkselection3" group="popup_operations"/>
+        <Action name="tools_kteunmarkselection4" group="popup_operations"/>
+        <Action name="tools_kteunmarkselection5" group="popup_operations"/>
+        <Action name="tools_kteunmarkall" group="popup_operations"/>
+    </Menu>
+    <separator group="tools_operations" />
+</Menu>
+
 </kpartplugin>
