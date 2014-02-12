@@ -7,4 +7,11 @@
     <Action name="tools_kterd_finish" group="tools_operations"/>
  </Menu>
 </MenuBar>
+
+<Menu name="ktexteditor_popup">
+    <separator group="tools_operations" />
+    <Action name="tools_kterd_setstartpos" group="tools_operations"/>
+    <Action name="tools_kterd_finish" group="tools_operations"/>
+</Menu>
+
 </kpartplugin>

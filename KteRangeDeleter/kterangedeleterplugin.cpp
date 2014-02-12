@@ -46,23 +46,23 @@ KteRangeDeleterPlugin::~KteRangeDeleterPlugin()
 {
 }
 
-void KteRangeDeleterPlugin::addView(KTextEditor::View *view)
+void KteRangeDeleterPlugin::addView( KTextEditor::View *view )
 {
-	KteRangeDeleterView *nview = new KteRangeDeleterView(view);
-	m_views.append(nview);
+    KteRangeDeleterView *nview = new KteRangeDeleterView( view );
+    m_views.append( nview );
 }
 
-void KteRangeDeleterPlugin::removeView(KTextEditor::View *view)
+void KteRangeDeleterPlugin::removeView( KTextEditor::View *view )
 {
-	for(int z = 0; z < m_views.size(); z++)
-	{
-		if(m_views.at(z)->parentClient() == view)
-		{
-			KteRangeDeleterView *nview = m_views.at(z);
-			m_views.removeAll(nview);
-			delete nview;
-		}
-	}
+    for( int z = 0; z < m_views.size(); z++ )
+    {
+        if( m_views.at( z )->parentClient() == view )
+        {
+            KteRangeDeleterView *nview = m_views.at( z );
+            m_views.removeAll( nview );
+            delete nview;
+        }
+    }
 }
 
 void KteRangeDeleterPlugin::readConfig()
@@ -73,24 +73,25 @@ void KteRangeDeleterPlugin::writeConfig()
 {
 }
 
-KteRangeDeleterView::KteRangeDeleterView(KTextEditor::View *view): QObject(view), KXMLGUIClient(view),
-    m_view(view),
-    m_startPosCursor(0)
+KteRangeDeleterView::KteRangeDeleterView( KTextEditor::View *view ): QObject( view ), KXMLGUIClient( view ),
+    m_view( view ),
+    m_startPosCursor( 0 )
 {
-	setComponentData(KteRangeDeleterPluginFactory::componentData());
-	
-	KAction *action = new KAction(i18n("Set start position"), this);
-    actionCollection()->addAction("tools_kterd_setstartpos", action);
-	//action->setShortcut(Qt::CTRL + Qt::Key_XYZ);
-	connect(action, SIGNAL(triggered()), this, SLOT(onSetStartPos()));
-    
-    m_finishAction = new KAction(i18n("Delete to here"), this);
-    actionCollection()->addAction("tools_kterd_finish", m_finishAction);
-    m_finishAction->setEnabled(false);
-    //action->setShortcut(Qt::CTRL + Qt::Key_XYZ);
-    connect(m_finishAction, SIGNAL(triggered()), this, SLOT(onFinish()));
+    setComponentData( KteRangeDeleterPluginFactory::componentData() );
 
-	setXMLFile("kterangedeleterui.rc");
+    KAction *action = new KAction( KIcon("start"), i18n( "Set start position" ), this );
+    actionCollection()->addAction( "tools_kterd_setstartpos", action );
+
+    //action->setShortcut(Qt::CTRL + Qt::Key_XYZ);
+    connect( action, SIGNAL( triggered() ), this, SLOT( onSetStartPos() ) );
+
+    m_finishAction = new KAction( KIcon("edit-delete"), i18n( "Delete to here" ), this );
+    actionCollection()->addAction( "tools_kterd_finish", m_finishAction );
+    m_finishAction->setEnabled( false );
+    //action->setShortcut(Qt::CTRL + Qt::Key_XYZ);
+    connect( m_finishAction, SIGNAL( triggered() ), this, SLOT( onFinish() ) );
+
+    setXMLFile( "kterangedeleterui.rc" );
 }
 
 KteRangeDeleterView::~KteRangeDeleterView()
