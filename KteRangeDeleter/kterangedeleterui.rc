@@ -1,0 +1,10 @@
+<!DOCTYPE kpartgui>
+<kpartplugin name="ktexteditor_kterangedeleter" library="ktexteditor_kterangedeleter" version="2">
+<MenuBar>
+ <Menu name="tools"><Text>&amp;Tools</Text>
+    <separator group="tools_operations" />
+    <Action name="tools_kterd_setstartpos" group="tools_operations"/>
+    <Action name="tools_kterd_finish" group="tools_operations"/>
+ </Menu>
+</MenuBar>
+</kpartplugin>
